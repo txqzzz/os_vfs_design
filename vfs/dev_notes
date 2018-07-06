@@ -1,0 +1,40 @@
+//
+// created by Xingqi Tang on 7/4/2018
+//
+
+
+# day 0
+
+# vhd size = 64 Mb = 65536 Kb
+# block size = 4kb
+
+vhd blocks allocation
+#0 MBR
+#1 isb      stack[stack_depth|empty block number
+#2 dsb      stack|stack_depth|empty block number
+#3~515      i_ino/i_hash/i_sb_list/i_mode/i_uid/i_nlink/i_gid/i_size/i_atime/i_mtime/i_ctime(*)/i_blocks/i_bytes/i_sb/
+#516~16383  dentry_obj: filename/i_ino/
+             file_obj: dir_entry/file_mode/this.filename/this.ino
+
+# day 1
+command design
+
+ls
+mkdir
+rmdir
+ln
+cp
+open
+close
+read
+write
+chown
+chmod
+cd
+..
+~
+clear
+find
+
+
+
