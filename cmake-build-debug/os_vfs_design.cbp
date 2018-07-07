@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="os_vfs_design"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="os_vfs_design">
+				<Option output="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/os_vfs_design.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs"/>
+					<Add directory="C:/win_builds/include"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/x86_64-w64-mingw32"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 os_vfs_design"/>
+					<CompileFile command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="os_vfs_design/fast">
+				<Option output="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/os_vfs_design.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs"/>
+					<Add directory="C:/win_builds/include"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/x86_64-w64-mingw32"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../include/c++/4.8.3/backward"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/include-fixed"/>
+					<Add directory="c:\win_builds\bin\../lib64/gcc/x86_64-w64-mingw32/4.8.3/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 os_vfs_design/fast"/>
+					<CompileFile command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/win_builds/bin/mingw32-make.exe -f &quot;D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/.idea/vcs.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/codeStyles/Project.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/dictionaries/dsay.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/misc.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/modules.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/vcs.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/vfs.iml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/.idea/workspace.xml">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/CMakeLists.txt">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/CMakeCache.txt">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/Makefile">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/VFS.VHD">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/cmake_install.cmake">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/vfs">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/vfs.cbp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/cmake-build-debug/vfs.layout">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dev_notes">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/main.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/sbController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/sbController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.cpp">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h">
+			<Option target="os_vfs_design"/>
+		</Unit>
+		<Unit filename="D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

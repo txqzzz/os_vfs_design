@@ -11,10 +11,6 @@ typedef struct BootstrapBlock{
     BootstrapBlock(){
         cout<<"welcome to VFS!"<<endl;
     }
-    ~BootstrapBlock() {
-
-    }
-
 };
 typedef struct iSb{
     int StackDeep;
@@ -40,6 +36,7 @@ typedef struct iNode{
     int i_block;
     int i_bytes;
     int i_sb;
+    int i_addr[1024];//index array,lengths need discuss
     //i_ino/i_hash/i_sb_list/i_mode/i_uid/i_nlink/i_gid/i_size/i_atime/i_mtime/i_ctime(*)/i_blocks/i_bytes/i_sb
 };
 //dentry_obj: filename/i_ino/
@@ -48,7 +45,11 @@ typedef struct Dentry{
     string fliename;
     int i_ino;
 };
-typedef struct file{
-
+typedef struct user{
+    int id;
+    string name;
+    string password;
+    int authority;
 };
+
 #endif //VFS_DATA_STRUCTURE_H

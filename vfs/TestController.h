@@ -4,7 +4,7 @@
 
 #ifndef VFS_TEST_H
 #define VFS_TEST_H
-
+#include"vhdController.h"
 
 class TestController {
 public:
@@ -12,7 +12,7 @@ public:
     ~TestController();
 
     bool testVhd();
+    static bool testvhdController(vhdController &_vhd_);
 };
-
 
 #endif //VFS_TEST_H

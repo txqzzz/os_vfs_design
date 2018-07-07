@@ -34,4 +34,6 @@ using namespace std;
 #define BLOCK_SIZE 1024*4 // 4KB
 #define BLOCK_NUM (VHD_SIZE)/(BLOCK_SIZE)
 
+/* INDEX */
+#define INDEX_LIST_LENGTH 256
 #endif //VFS_PARAMS_H

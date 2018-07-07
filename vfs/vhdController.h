@@ -33,18 +33,13 @@ class vhdController {
 public:
     vhdController();
 
-    ~vhdController();
-
     bool create_vhd();
 
     bool del_vhd();
-
     bool load_vhd();
-
+    bool Exists_vhd();
     bool read_vhd(char * buffer , int blockId, int len = BLOCK_SIZE);
-
     bool write_vhd(char * buffer, int blockId, int len = BLOCK_SIZE);
-
 private:
     const char * filename;
     int size;

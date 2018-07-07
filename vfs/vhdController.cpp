@@ -24,9 +24,9 @@ vhdController::vhdController() {
     this->size = VHD_SIZE;
     //this->vfile = vhd_file;
 }
-
-vhdController::~vhdController() {
-    vfile.close();
+bool vhdController::Exists_vhd(){
+    ifstream f(this->filename);
+    return f.good();
 }
 
 bool vhdController::create_vhd() {
@@ -74,7 +74,6 @@ bool vhdController::read_vhd(char *buffer, int blockId, int len) {
     this->vfile.seekg(blockId * BLOCK_SIZE); //set postion in input sequence
     vfile.read(buffer, len);
     // delete []  buffer;
-
     return true;
 
 }
