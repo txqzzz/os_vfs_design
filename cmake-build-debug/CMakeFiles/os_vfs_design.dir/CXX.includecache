@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h
+Params.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
+stack
+-
+list
+-
+string
+-
+vector
+-
+
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
 iostream
 -
@@ -37,10 +49,14 @@ TestController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
 vhdController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+DataStructure.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
 vhdController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+iNodeController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.cpp
 dentryController.h
@@ -53,12 +69,22 @@ fsController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h
+DataStructure.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.cpp
 iNodeController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
+iNodeController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
+vhdController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+fsController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h
+DataStructure.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h
 
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/main.cpp
 iostream
@@ -69,6 +95,10 @@ TestController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
 vhdController.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+iNodeController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
+DataStructure.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/DataStructure.h
 Params.h
 D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
 

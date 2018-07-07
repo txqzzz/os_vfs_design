@@ -1,14 +1,11 @@
 //
 // Created by Xingqi Tang on 2018/7/5.
 //
-
 #include "fsController.h"
-#include "DataStructure.h"
-//#include "teiqiangle"
 
 fsController::fsController() {
-    this->user_num = 0;
-    this->root_path = ROOT_PATH;
+//    this->user_num = 0;
+  //  this->root_path = ROOT_PATH;
 }
 
 
@@ -37,8 +34,8 @@ bool fsController::init_iNode_free_list() {
 }
 
 bool fsController::init_user_info() {
-    this->fs.user_info[user_num].name = 'root';
-    this->fs.user_info[user_num++].password = '0831';
+    this->fs.user_info[user_num].name = "root";
+    this->fs.user_info[user_num++].password = "0831";
     return true;
 }
 

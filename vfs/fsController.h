@@ -2,15 +2,13 @@
 // Created by Xingqi Tang on 2018/7/5.
 //
 
-#include "DataStructure.h
 #ifndef VFS_FSCONTROLLER_H
 #define VFS_FSCONTROLLER_H
-
+#include "DataStructure.h"
 
 class fsController {
 public:
     fsController();
-    ~fsController();
     bool mountfs(); // install + initialize filesystem info
     bool loadfs(); // load super block/dentry block/root dir
     bool formatfs();

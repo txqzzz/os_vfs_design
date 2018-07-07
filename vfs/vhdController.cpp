@@ -45,8 +45,6 @@ bool vhdController::create_vhd() {
         cout << "[err]vhd_file write failed." << endl;
         return false;
     }
-    //this->vfile = vhd_file;
-    //this->vfile= vhd_file.open(this->filename, ios::in | ios::out| ios::binary);
     vhd_file.close();
     delete[] buffer;
     return true;
@@ -64,7 +62,6 @@ bool vhdController::del_vhd() {
     }
     vhd_file.close();
     remove(this->filename);
-
     return true;
 }
 
@@ -89,4 +86,9 @@ bool vhdController::write_vhd(char *buffer, int blockId, int len) {
     } else {
         return false;
     }
+}
+bool vhdController::del_vhd(int Block_id) {
+        this->vfile.seekp(Block_id * BLOCK_SIZE);
+        this->vfile.write("0",BLOCK_SIZE);
+        return true;
 }

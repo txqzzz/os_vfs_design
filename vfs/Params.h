@@ -56,5 +56,3 @@ using namespace std;
 #define MAX_USER_NUMBER 8
 
 #endif //VFS_PARAMS_H
-
-
