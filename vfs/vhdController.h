@@ -40,6 +40,7 @@ public:
     bool Exists_vhd();
     bool read_vhd(char * buffer , int blockId, int len = BLOCK_SIZE);
     bool write_vhd(char * buffer, int blockId, int len = BLOCK_SIZE);
+    bool del_vhd(int Block_id);
 private:
     const char * filename;
     int size;

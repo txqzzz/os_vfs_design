@@ -5,34 +5,35 @@
 #include <stack>
 #include <list>
 #include <string>
+#include <vector>
 #ifndef VFS_DATA_STRUCTURE_H
 #define VFS_DATA_STRUCTURE_H
-typedef struct BootstrapBlock{
+struct BootstrapBlock{
     BootstrapBlock(){
         cout<<"welcome to VFS!"<<endl;
     }
 };
-typedef struct iSb{
+struct iSb{
     int stackDepth;
     stack< int > iSbStack;
 };
 
-typedef struct dSb{
+struct dSb{
     int stackDepth;
     stack < int > dSbStack;
-}
+};
 
-typedef struct iNode{
+struct iNode{
     int i_ino;
-    vector i_hash;
-    list i_sb_list;
+    vector<int > i_hash;
+    list<int > i_sb_list;
     int i_mode;
     int i_uid;
     int i_nlink;
-    int g_gid;
+    int i_gid;
     int i_size;
-    string i_atime;
-    string i_mtime;
+    char i_atime[15];
+    char i_mtime[15];
     int i_block;
     int i_bytes;
     int i_sb;
@@ -41,12 +42,12 @@ typedef struct iNode{
 };
 //dentry_obj: filename/i_ino/
 //            file_obj: dir_entry/file_mode/this.filename/this.ino
-typedef struct Dentry{
+struct Dentry{
     string fliename;
     int i_ino;
 };
 
-typedef struct user{
+struct user {
     int id;
     string name;
     string password;

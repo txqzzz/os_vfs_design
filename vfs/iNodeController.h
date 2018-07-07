@@ -1,23 +1,22 @@
 //
 // Created by Xingqi Tang on 2018/7/5.
 //
-
 #ifndef VFS_INODECONTROLLER_H
 #define VFS_INODECONTROLLER_H
-
+#include "iNodeController.h"
+#include "vhdController.h"
+#include "fsController.h"
 #include "DataStructure.h"
-
 class iNodeController {
 public:
 
-    bool write_iNode(iNode);
-    bool del_iNode();
-    bool modify_iNode();
-    bool read_iNode();
-    int find_iNode_by_uid();
+    bool write_iNode(iNode i_inode, fsController &fs_Controller);
+    bool del_iNode(iNode i_Node);
+    //bool modify_iNode();
+    bool read_iNode(int id,iNode &i_Node);
+    int  find_iNode_by_uid(int id);
 private:
     iNode inode;
-
 };
 //    int i_ino;
 //    vector i_hash;
