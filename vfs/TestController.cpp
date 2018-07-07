@@ -36,9 +36,9 @@ bool TestController::testvhdController(vhdController &_vhd_) {
         cout << "vhd load error" << endl;
     char wbuff[BLOCK_SIZE];
     memset(wbuff, 0, BLOCK_SIZE);
-    strcpy_s(wbuff, "test0");
+    strcpy(wbuff, "test0");
     _vhd_.write_vhd(wbuff, 0);
-    strcpy_s(wbuff, "test1");
+    strcpy(wbuff, "test1");
     _vhd_.write_vhd(wbuff, 1);
     char rdbuff[BLOCK_SIZE];
     _vhd_.read_vhd(rdbuff, 0);

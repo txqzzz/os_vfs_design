@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# Idea files
+.idea/*
+vfs/.idea/*
+
+# Mac OS X files
+.DS_Store/*
+vfs/.DS_Store/*

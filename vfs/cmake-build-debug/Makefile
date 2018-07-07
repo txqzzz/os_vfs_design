@@ -123,6 +123,33 @@ vfs/fast:
 	$(MAKE) -f CMakeFiles/vfs.dir/build.make CMakeFiles/vfs.dir/build
 .PHONY : vfs/fast
 
+LGM.o: LGM.cpp.o
+
+.PHONY : LGM.o
+
+# target to build an object file
+LGM.cpp.o:
+	$(MAKE) -f CMakeFiles/vfs.dir/build.make CMakeFiles/vfs.dir/LGM.cpp.o
+.PHONY : LGM.cpp.o
+
+LGM.i: LGM.cpp.i
+
+.PHONY : LGM.i
+
+# target to preprocess a source file
+LGM.cpp.i:
+	$(MAKE) -f CMakeFiles/vfs.dir/build.make CMakeFiles/vfs.dir/LGM.cpp.i
+.PHONY : LGM.cpp.i
+
+LGM.s: LGM.cpp.s
+
+.PHONY : LGM.s
+
+# target to generate assembly for a file
+LGM.cpp.s:
+	$(MAKE) -f CMakeFiles/vfs.dir/build.make CMakeFiles/vfs.dir/LGM.cpp.s
+.PHONY : LGM.cpp.s
+
 TestController.o: TestController.cpp.o
 
 .PHONY : TestController.o
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... vfs"
+	@echo "... LGM.o"
+	@echo "... LGM.i"
+	@echo "... LGM.s"
 	@echo "... TestController.o"
 	@echo "... TestController.i"
 	@echo "... TestController.s"

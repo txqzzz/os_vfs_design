@@ -2,19 +2,31 @@
 // Created by Xingqi Tang on 2018/7/5.
 //
 
+#include "DataStructure.h
 #ifndef VFS_FSCONTROLLER_H
 #define VFS_FSCONTROLLER_H
 
 
 class fsController {
+public:
     fsController();
     ~fsController();
-    bool mountfs();
-    bool loadfs();
+    bool mountfs(); // install + initialize filesystem info
+    bool loadfs(); // load super block/dentry block/root dir
     bool formatfs();
+    bool init_iNode_free_list();
+    bool init_user_info();
+    bool init_dentry_info();
+    int get_next_free_list_index() {
+        return next_free_list_index;
+    }
+
+private:
+    fileSystem fs;
+    int user_num;
+    int cur_dir_inode;
+    int next_free_list_index;
+    string root_path;
 };
 
-//mount 安装： 执行操作为：
-//load  执行操作为： 加载超级快 加载用户信息 加载目录信息 初始化根目录
-// format 执行操作为：
 #endif //VFS_FSCONTROLLER_H

@@ -12,9 +12,10 @@ vhd blocks allocation
 #0 MBR
 #1 isb      stack[stack_depth|empty block number
 #2 dsb      stack|stack_depth|empty block number
-#3~515      i_ino/i_hash/i_sb_list/i_mode/i_uid/i_nlink/i_gid/i_size/i_atime/i_mtime/i_ctime(*)/i_blocks/i_bytes/i_sb/
-#516~16383  dentry_obj: filename/i_ino/
-             file_obj: dir_entry/file_mode/this.filename/this.ino
+#3~514
+[512]       i_ino/i_hash/i_sb_list/i_mode/i_uid/i_nlink/i_gid/i_size/i_atime/i_mtime/i_ctime(*)/i_blocks/i_bytes/i_sb/
+#515~16383  dentry_obj: filename/i_ino/
+[15869]     file_obj: dir_entry/file_mode/this.filename/this.ino
 
 # day 1
 command design

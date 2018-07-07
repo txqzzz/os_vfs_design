@@ -13,12 +13,12 @@ typedef struct BootstrapBlock{
     }
 };
 typedef struct iSb{
-    int StackDeep;
+    int stackDepth;
     stack< int > iSbStack;
 };
 
 typedef struct dSb{
-    int StackDeep;
+    int stackDepth;
     stack < int > dSbStack;
 }
 
@@ -45,11 +45,21 @@ typedef struct Dentry{
     string fliename;
     int i_ino;
 };
+
 typedef struct user{
     int id;
     string name;
     string password;
     int authority;
+};
+
+struct fileSystem {
+    iSb iNodeSb;
+    dSb dentrySb;
+    Dentry dentry;
+    user user_info[MAX_USER_NUMBER];
+    int i_free_list[INDEX_LIST_NUMBER][INDEX_LIST_LENGTH];
+    int d_free_list[DENTRY_LIST_NUMBER][DENTRY_LIST_LENGTH];
 };
 
 #endif //VFS_DATA_STRUCTURE_H

@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/DataStructure.h">
+			<Option target="vfs"/>
+		</Unit>
+		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/LGM.cpp">
+			<Option target="vfs"/>
+		</Unit>
 		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/Params.h">
 			<Option target="vfs"/>
 		</Unit>
@@ -89,9 +95,6 @@
 			<Option target="vfs"/>
 		</Unit>
 		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/TestController.h">
-			<Option target="vfs"/>
-		</Unit>
-		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/data structure.h">
 			<Option target="vfs"/>
 		</Unit>
 		<Unit filename="/Users/dsay/edu/neu/2018OS/os_vfs_design/vfs/dentryController.cpp">

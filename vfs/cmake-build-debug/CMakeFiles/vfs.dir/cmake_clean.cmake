@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/vfs.dir/TestController.cpp.o"
   "CMakeFiles/vfs.dir/dentryController.cpp.o"
   "CMakeFiles/vfs.dir/iNodeController.cpp.o"
+  "CMakeFiles/vfs.dir/LGM.cpp.o"
   "vfs.pdb"
   "vfs"
 )
