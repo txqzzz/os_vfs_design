@@ -1,0 +1,4 @@
+"D:\clion\CLion 2018.1.5\bin\cmake\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "D:\data\os\OS curriculum design\os_vfs_design\os_vfs_design"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/cmake-build-debug

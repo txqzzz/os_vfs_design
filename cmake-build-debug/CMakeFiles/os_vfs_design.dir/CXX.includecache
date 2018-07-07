@@ -1,0 +1,142 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
+iostream
+-
+algorithm
+-
+cstdio
+-
+vector
+-
+cstring
+-
+map
+-
+queue
+-
+stack
+-
+string
+-
+cstdlib
+-
+ctime
+-
+set
+-
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.cpp
+TestController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
+vhdController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
+vhdController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.cpp
+dentryController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/dentryController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.cpp
+fsController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/fsController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.cpp
+iNodeController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/iNodeController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/main.cpp
+iostream
+-
+fstream
+-
+TestController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/TestController.h
+vhdController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+Params.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/sbController.cpp
+sbController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/sbController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/sbController.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.cpp
+iostream
+-
+algorithm
+-
+cstdio
+-
+vector
+-
+cstring
+-
+map
+-
+queue
+-
+stack
+-
+string
+-
+cstdlib
+-
+ctime
+-
+set
+-
+fstream
+-
+vhdController.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+Params.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
+
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/vhdController.h
+iostream
+-
+algorithm
+-
+cstdio
+-
+vector
+-
+cstring
+-
+map
+-
+queue
+-
+stack
+-
+string
+-
+cstdlib
+-
+ctime
+-
+set
+-
+fstream
+-
+Params.h
+D:/data/os/OS curriculum design/os_vfs_design/os_vfs_design/vfs/Params.h
+
