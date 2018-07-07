@@ -12,29 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de14f5e7-c599-481b-b93b-d72a07add5cb" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/LGM.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataStructure.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataStructure.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Params.h" beforeDir="false" afterPath="$PROJECT_DIR$/Params.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/TestController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/vfs.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vfs" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vfs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/vfs.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/vfs.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dev_notes" beforeDir="false" afterPath="$PROJECT_DIR$/dev_notes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fsController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/fsController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fsController.h" beforeDir="false" afterPath="$PROJECT_DIR$/fsController.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iNodeController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/iNodeController.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iNodeController.h" beforeDir="false" afterPath="$PROJECT_DIR$/iNodeController.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +28,8 @@
       <file leaf-file-name="iNodeController.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/iNodeController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="165">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
               <folding>
                 <element signature="e#46#74#0" expanded="true" />
               </folding>
@@ -102,11 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vhdController.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vhdController.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vhdController.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
+            <state relative-caret-position="120">
+              <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
               <folding>
                 <element signature="e#45#63#0" expanded="true" />
               </folding>
@@ -135,7 +113,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fsController.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fsController.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fsController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
@@ -163,7 +141,6 @@
         <option value="$PROJECT_DIR$/TestController.h" />
         <option value="$PROJECT_DIR$/sbController.h" />
         <option value="$PROJECT_DIR$/vhdController.h" />
-        <option value="$PROJECT_DIR$/vhdController.cpp" />
         <option value="$PROJECT_DIR$/TestController.cpp" />
         <option value="$PROJECT_DIR$/dev_notes" />
         <option value="$PROJECT_DIR$/LGM.cpp" />
@@ -174,6 +151,7 @@
         <option value="$PROJECT_DIR$/iNodeController.h" />
         <option value="$PROJECT_DIR$/fsController.h" />
         <option value="$PROJECT_DIR$/iNodeController.cpp" />
+        <option value="$PROJECT_DIR$/vhdController.cpp" />
       </list>
     </option>
   </component>
@@ -258,12 +236,12 @@
       <updated>1530683749114</updated>
       <workItem from="1530683750900" duration="654000" />
       <workItem from="1530770204214" duration="18292000" />
-      <workItem from="1530859159380" duration="23528000" />
+      <workItem from="1530859159380" duration="24668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42474000" />
+    <option name="totallyTimeSpent" value="43614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="24" y="34" width="1400" height="837" extended-state="0" />
@@ -476,32 +454,12 @@
     <entry file="file://$PROJECT_DIR$/dentryController.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vhdController.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="55" column="16" selection-start-line="55" selection-start-column="16" selection-end-line="55" selection-end-column="16" />
-          <folding>
-            <element signature="e#45#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vhdController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="41" column="69" lean-forward="true" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="69" />
           <folding>
             <element signature="e#83#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/iNodeController.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#46#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -527,6 +485,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/iNodeController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+          <folding>
+            <element signature="e#46#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vhdController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="71" column="24" lean-forward="true" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
+          <folding>
+            <element signature="e#45#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

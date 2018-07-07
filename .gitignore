@@ -36,5 +36,8 @@
 vfs/.idea/*
 
 # Mac OS X files
-.DS_Store/*
-vfs/.DS_Store/*
+.DS_Store
+vfs/.DS_Store
+
+# cmake files
+cmake-build-debug/*

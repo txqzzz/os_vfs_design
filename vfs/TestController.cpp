@@ -70,7 +70,7 @@ bool TestController::testiNodeController(iNodeController &_iNode_, fsController 
     iNode myiNode2;
     //cout << myiNode.i_mode << endl;
     _iNode_.write_iNode(myiNode, _fs_);
-    char rdbuf[BLOCK_SIZE];
+    char * rdbuf = new char[BLOCK_SIZE];
     //cout << _fs_.get_next_free_list_index()<<endl;
     _vhd_.load_vhd();
     _vhd_.read_vhd(rdbuf, 0);

@@ -1,15 +1,13 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/os_vfs_design.dir/vfs/dentryController.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/fsController.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/iNodeController.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/main.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/sbController.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/TestController.cpp.obj"
-  "CMakeFiles/os_vfs_design.dir/vfs/vhdController.cpp.obj"
+  "CMakeFiles/os_vfs_design.dir/vfs/dentryController.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/fsController.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/iNodeController.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/main.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/sbController.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/TestController.cpp.o"
+  "CMakeFiles/os_vfs_design.dir/vfs/vhdController.cpp.o"
   "os_vfs_design.pdb"
-  "os_vfs_design.exe"
-  "os_vfs_design.exe.manifest"
-  "libos_vfs_design.dll.a"
+  "os_vfs_design"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,3 +1,1 @@
-"D:\clion\CLion 2018.1.5\bin\cmake\bin\cmake.exe" -E remove -f CMakeFiles\os_vfs_design.dir/objects.a
-C:\win_builds\bin\ar.exe cr CMakeFiles\os_vfs_design.dir/objects.a @CMakeFiles\os_vfs_design.dir\objects1.rsp
-C:\win_builds\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\os_vfs_design.dir/objects.a -Wl,--no-whole-archive  -o os_vfs_design.exe -Wl,--out-implib,libos_vfs_design.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\os_vfs_design.dir\linklibs.rsp
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/os_vfs_design.dir/vfs/dentryController.cpp.o CMakeFiles/os_vfs_design.dir/vfs/fsController.cpp.o CMakeFiles/os_vfs_design.dir/vfs/iNodeController.cpp.o CMakeFiles/os_vfs_design.dir/vfs/main.cpp.o CMakeFiles/os_vfs_design.dir/vfs/sbController.cpp.o CMakeFiles/os_vfs_design.dir/vfs/TestController.cpp.o CMakeFiles/os_vfs_design.dir/vfs/vhdController.cpp.o  -o os_vfs_design 
