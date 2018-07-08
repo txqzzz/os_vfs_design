@@ -24,7 +24,8 @@ vhdController::vhdController() {
     this->size = VHD_SIZE;
     //this->vfile = vhd_file;
 }
-bool vhdController::Exists_vhd(){
+
+bool vhdController::Exists_vhd() {
     ifstream f(this->filename);
     return f.good();
 }
@@ -49,10 +50,12 @@ bool vhdController::create_vhd() {
     delete[] buffer;
     return true;
 }
-bool vhdController::load_vhd(){
-    this->vfile.open(this->filename, ios::in | ios::out| ios::binary);
+
+bool vhdController::load_vhd() {
+    this->vfile.open(this->filename, ios::in | ios::out | ios::binary);
     return true;
 }
+
 bool vhdController::del_vhd() {
     ofstream vhd_file;
     vhd_file.open(this->filename, ios::out | ios::binary);
@@ -87,8 +90,9 @@ bool vhdController::write_vhd(char *buffer, int blockId, int len) {
         return false;
     }
 }
+
 bool vhdController::del_vhd(int Block_id) {
-        this->vfile.seekp(Block_id * BLOCK_SIZE);
-        this->vfile.write("0",BLOCK_SIZE);
-        return true;
+    this->vfile.seekp(Block_id * BLOCK_SIZE);
+    this->vfile.write("0", BLOCK_SIZE);
+    return true;
 }

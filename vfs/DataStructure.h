@@ -6,27 +6,30 @@
 #include <list>
 #include <string>
 #include <vector>
+
 #ifndef VFS_DATA_STRUCTURE_H
 #define VFS_DATA_STRUCTURE_H
-struct BootstrapBlock{
-    BootstrapBlock(){
-        cout<<"welcome to VFS!"<<endl;
+
+struct BootstrapBlock {
+    BootstrapBlock() {
+        cout << "welcome to VFS!" << endl;
     }
 };
-struct iSb{
+
+struct iSb {
     int stackDepth;
-    stack< int > iSbStack;
+    stack<int> iSbStack;
 };
 
-struct dSb{
+struct dSb {
     int stackDepth;
-    stack < int > dSbStack;
+    stack<int> dSbStack;
 };
 
-struct iNode{
+struct iNode {
     int i_ino;
-    vector<int > i_hash;
-    list<int > i_sb_list;
+    vector<int> i_hash;
+    list<int> i_sb_list;
     int i_mode;
     int i_uid;
     int i_nlink;
@@ -42,16 +45,23 @@ struct iNode{
 };
 //dentry_obj: filename/i_ino/
 //            file_obj: dir_entry/file_mode/this.filename/this.ino
-struct Dentry{
+struct Dentry {
     string fliename;
     int i_ino;
 };
 
 struct user {
     int id;
-    string name;
-    string password;
+    char *name = new char[10];
+    char *password = new char[10];
     int authority;
+
+//    ~user()
+//    {
+//        delete[] name;
+//        delete[] password;
+//    }
+
 };
 
 struct fileSystem {
