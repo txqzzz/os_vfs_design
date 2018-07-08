@@ -54,9 +54,32 @@ bool TestController::testvhdController(vhdController &_vhd_) {
         return false;
     }
 }
-
-bool TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
-    iNode myiNode;
+/*
+bool TestController::testuserController(userController &_user_) {
+    user my_user;
+    user my_user2;
+    vhdController vhd_Controller;
+    my_user.id = 100;
+    string name = "wz";
+    string password = "9264944wz";
+    my_user.name = (char *) name.c_str();
+    my_user.password = (char *) password.c_str();
+    my_user.authority = 1;
+    _user_.addUser(my_user);
+    my_user2 = my_user;
+    my_user2.id = 2;
+    _user_.addUser(my_user2);
+    _user_.wirteUser();
+    _user_.loadUser();
+    _user_.showUser();
+    _user_.delUser(2);
+    _user_.showUser();
+    _user_.addUser(my_user);
+    _user_.showUser();
+    _user_.UserloginIN();
+}*/
+/*int  TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
+    iNode myiNode,myiNode2;
     vhdController _vhd_;
     myiNode.i_ino = 1;
     myiNode.i_uid = 0;
@@ -67,20 +90,19 @@ bool TestController::testiNodeController(iNodeController &_iNode_, fsController 
     myiNode.i_mode = 1;
     myiNode.i_sb = 1;
     myiNode.i_nlink = 2;
-    iNode myiNode2;
     //cout << myiNode.i_mode << endl;
     _iNode_.write_iNode(myiNode, _fs_);
-    char *rdbuf = new char[BLOCK_SIZE];
+    char * rdbuf = new char[BLOCK_SIZE];
     //cout << _fs_.get_next_free_list_index()<<endl;
     _vhd_.load_vhd();
     _vhd_.read_vhd(rdbuf, 0);
     memcpy((char *) &myiNode2, rdbuf, BLOCK_SIZE);
     cout << myiNode2.i_bytes << endl;
-    iNode myiNode3;
-    _iNode_.read_iNode(0, myiNode3);
-    cout << myiNode3.i_nlink << endl;
+    _iNode_.read_iNode(0, myiNode2);
+    cout << myiNode2.i_nlink << endl;
     cout << _iNode_.find_iNode_by_uid(0) << endl;
     cout << _iNode_.find_iNode_by_uid(1) << endl;
     delete[] rdbuf;
-    return true;
-}
+    cout<<"return"<<endl;
+    return 0;
+}*/
