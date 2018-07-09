@@ -19,7 +19,7 @@ public:
     bool save_Sb();
     bool save_Sb(int id);
     bool release_datab(int id);
-    bool  setfullflag();
+    bool setfullflag();
     bool show();
     sB get_sB();
 private:

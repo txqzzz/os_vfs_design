@@ -80,8 +80,8 @@ bool TestController::testuserController(userController &_user_) {
     return true;
 }
 
-int  TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
-    iNode myiNode,myiNode2;
+int TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
+    iNode myiNode, myiNode2;
     vhdController _vhd_;
     myiNode.i_ino = 1;
     myiNode.i_uid = 0;
@@ -94,7 +94,7 @@ int  TestController::testiNodeController(iNodeController &_iNode_, fsController 
     myiNode.i_nlink = 2;
     //cout << myiNode.i_mode << endl;
     _iNode_.write_iNode(myiNode, _fs_);
-    char * rdbuf = new char[BLOCK_SIZE];
+    char *rdbuf = new char[BLOCK_SIZE];
     //cout << _fs_.get_next_free_list_index()<<endl;
     _vhd_.load_vhd();
     _vhd_.read_vhd(rdbuf, 0);
@@ -105,22 +105,26 @@ int  TestController::testiNodeController(iNodeController &_iNode_, fsController 
     cout << _iNode_.find_iNode_by_uid(0) << endl;
     cout << _iNode_.find_iNode_by_uid(1) << endl;
     delete[] rdbuf;
-    cout<<"return"<<endl;
+    cout << "return" << endl;
     return 0;
 }
 
 bool TestController::testdataController(dataBController &_dataB_) {
     _dataB_.init_datab();
     sB superBlock_;
-    superBlock_=_dataB_.get_sB();
+    superBlock_ = _dataB_.get_sB();
     //cout<<superBlock_.DstackDepth<<endl;
-    int temp,temp2;
-    temp=_dataB_.alloc_datab();
-    temp2=_dataB_.alloc_datab();
-    cout<<temp <<" "<<temp2<<endl;
+    int temp, temp2, temp3;
+    temp = _dataB_.alloc_datab();
+    temp2 = _dataB_.alloc_datab();
     //_dataB_.show();
 
     _dataB_.release_datab(temp2);
+    _dataB_.release_datab(temp);
+    temp3 = _dataB_.alloc_datab();
+    cout << temp << endl;
+    cout << temp2 << endl;
+    cout << temp3 << endl;
     _dataB_.show();
 
 }
