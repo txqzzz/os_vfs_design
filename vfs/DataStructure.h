@@ -40,7 +40,7 @@ struct sB {
     int s_Block_StartAddr;
     int s_Inode_StartAddr;
     int DstackDepth;
-    stack<int> dSbStack;
+    int stack[DATAB_END-DATAB_BEG];
     bool i_bitmap[512]; //inode_num = inode_end - inode_beg + 1
     bool d_bitmap[15869];
 };

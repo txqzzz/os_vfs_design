@@ -60,21 +60,20 @@ bool dataBController::init_datab() {
 } // 初始化 回收所有数据块
 bool dataBController::release_datab(int BlockID) {
     if (this->superblock.DstackDepth  == DATAB_LIST_LENGTH) {
-        if (!this->load_Sb(BlockID))
-            return true;
+        if (!this->save_Sb(BlockID))
+            return false;
         memset((char*)&this->superblock,0, sizeof(this->superblock));
         this->superblock.DstackDepth = 1;
     }
     else this->superblock.DstackDepth++;
-    this->superblock.dSbStack.push(BlockID);
+    this->superblock.stack[this->superblock.DstackDepth-1]=BlockID;
     return true;
 }
 int  dataBController::alloc_datab() {
-    if (this->superblock.dSbStack.top()== 0)
+    if (this->superblock.stack[this->superblock.DstackDepth -1 ]== 0)
         return false;
     int temp;
-    temp=this->superblock.dSbStack.top();
-    this->superblock.dSbStack.pop();
+    temp=this->superblock.stack[this->superblock.DstackDepth-1];
     cout<<"alloc_datab:"<<temp<<endl;
     if (this->superblock.DstackDepth==1){
         this->superblockid=temp;
@@ -85,10 +84,13 @@ int  dataBController::alloc_datab() {
 }
 bool dataBController::setfullflag() {
     this->superblock.DstackDepth=1;
-    stack<int>().swap(this->superblock.dSbStack);
-    if(!this->superblock.dSbStack.empty()) {
-        cerr << "[err] clear failed." << endl;
-        return false;
+    this->superblock.stack[0]=0;
+    return true;
+}
+bool dataBController::show(){
+    cout<<this->superblock.DstackDepth<<endl;
+    for (int i=0;i<this->superblock.DstackDepth;i++){
+        cout<<this->superblock.stack[i]<<endl;
     }
     return true;
 }

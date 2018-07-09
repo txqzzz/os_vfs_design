@@ -111,11 +111,16 @@ int  TestController::testiNodeController(iNodeController &_iNode_, fsController 
 
 bool TestController::testdataController(dataBController &_dataB_) {
     _dataB_.init_datab();
-    //sB superBlock_;
-    //superBlock_=_dataB_.get_sB();
-    cout<<_dataB_.get_sB().DstackDepth<<endl;
-    //int temp,temp2;
-    //temp=_dataB_.alloc_datab();
-    //temp=_dataB_.alloc_datab();
-    //cout<<temp<<temp2<<endl;
+    sB superBlock_;
+    superBlock_=_dataB_.get_sB();
+    //cout<<superBlock_.DstackDepth<<endl;
+    int temp,temp2;
+    temp=_dataB_.alloc_datab();
+    temp2=_dataB_.alloc_datab();
+    cout<<temp <<" "<<temp2<<endl;
+    //_dataB_.show();
+
+    _dataB_.release_datab(temp2);
+    _dataB_.show();
+
 }
