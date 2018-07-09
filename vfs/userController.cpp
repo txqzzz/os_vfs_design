@@ -6,7 +6,7 @@
 
 userController::userController() {
     this->num = 0;
-    for (int i = 0; i < 8; i++) {
+    for (size_t i = 0; i < 8; i++) {
         this->_user_[i].id = -1;
     }
 }
@@ -15,7 +15,7 @@ bool userController::loadUser() {
     vhdController vhd_Controller;
     char *buf = new char[BLOCK_SIZE];
     vhd_Controller.load_vhd();
-    vhd_Controller.read_vhd(buf, DATAB_START + 1);
+    vhd_Controller.read_vhd(buf, USER);
     memcpy((char *) &this->num, buf, sizeof(int));
     memcpy(this->_user_, buf + sizeof(int), sizeof(user) * 8);
     return true;
@@ -38,7 +38,7 @@ bool userController::wirteUser() {
     memcpy(buf, (char *) &this->num, sizeof(int));
     memcpy(buf + sizeof(int), this->_user_, (BLOCK_SIZE) - sizeof(int));
     vhd_Controller.load_vhd();
-    vhd_Controller.write_vhd(buf, DATAB_START + 1);
+    vhd_Controller.write_vhd(buf, USER);
     delete[] buf;
     return true;
 }

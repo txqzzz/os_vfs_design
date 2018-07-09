@@ -1,19 +1,47 @@
 //
 // Created by Xingqi Tang on 2018/7/6.
 //
+
+
+#ifndef VFS_DATA_STRUCTURE_H
+#define VFS_DATA_STRUCTURE_H
+
 #include "Params.h"
 #include <stack>
 #include <list>
 #include <string>
 #include <vector>
 
-#ifndef VFS_DATA_STRUCTURE_H
-#define VFS_DATA_STRUCTURE_H
+using namespace std;
 
-struct BootstrapBlock {
-    BootstrapBlock() {
-        cout << "welcome to VFS!" << endl;
+struct bootstrapBlock {
+    bootstrapBlock() {
+        string welcomeMsg = "Welcome to vfs!";
+        cout << welcomeMsg << endl;
     }
+};
+
+struct sB {
+    int get_s_free_inode_num() {
+        return s_free_inode_num;
+    }
+    int s_inode_num;
+    int s_block_num;
+    int s_superblock_size;
+    int s_inode_size;
+    int s_datab_size;
+    int s_free_inode_num;
+    int s_free_datab_num;
+    int s_blocks_per_group;
+    int s_free_addr;
+    int s_Superblock_StartAddr;
+    int s_BlockBitmap_StartAddr;
+    int s_InodeBitmap_StartAddr;
+    int s_Block_StartAddr;
+    int s_Inode_StartAddr;
+
+    bool i_bitmap[512]; //inode_num = inode_end - inode_beg + 1
+    bool d_bitmap[15869];
 };
 
 struct iSb {
@@ -43,7 +71,7 @@ struct iNode {
     int i_addr[1024];//index array,lengths need discuss
     //i_ino/i_hash/i_sb_list/i_mode/i_uid/i_nlink/i_gid/i_size/i_atime/i_mtime/i_ctime(*)/i_blocks/i_bytes/i_sb
 };
-//dentry_obj: filename/i_ino/
+//dentry_obj: filename/i_ino/`
 //            file_obj: dir_entry/file_mode/this.filename/this.ino
 struct Dentry {
     string fliename;
@@ -65,12 +93,15 @@ struct user {
 };
 
 struct fileSystem {
+    bootstrapBlock bB;
     iSb iNodeSb;
-    dSb dentrySb;
+    dSb dataSb;
+    sB superblock;
     Dentry dentry;
     user user_info[MAX_USER_NUMBER];
     int i_free_list[INDEX_LIST_NUMBER][INDEX_LIST_LENGTH];
-    int d_free_list[DENTRY_LIST_NUMBER][DENTRY_LIST_LENGTH];
+    int d_free_list[DATAB_LIST_NUMBER][DATAB_LIST_LENGTH];
 };
+
 
 #endif //VFS_DATA_STRUCTURE_H

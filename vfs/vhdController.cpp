@@ -75,7 +75,6 @@ bool vhdController::read_vhd(char *buffer, int blockId, int len) {
     vfile.read(buffer, len);
     // delete []  buffer;
     return true;
-
 }
 
 bool vhdController::write_vhd(char *buffer, int blockId, int len) {
