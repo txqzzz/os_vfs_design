@@ -11,6 +11,7 @@ bool dentryController::InitDirSFDList(iNode &cur, int parent_ino) {
     // Dot Dot denode its parent
     strcpy(sfdList[1].name, DOTDOT);
     sfdList[1].i_ino = parent_ino;
+    return true;
 }
 bool dentryController::CreateRootDir()
 {
@@ -42,6 +43,7 @@ bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ow
     fsC.create_empty_Flie(curDir, name, mode | DIRFLAG, ownerUid, rst);
     this->InitDirSFDList(*rst, curDir.i_ino);
     iNC.write_iNode(curDir);
+    return true;
 }
 /*bool dentryController::DeleteDir(const iNode& cur)
 {

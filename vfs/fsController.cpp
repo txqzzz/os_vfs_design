@@ -3,11 +3,8 @@
 //
 #include "fsController.h"
 #include "dataBController.h"
-
-fsController::fsController() {
-  //return;
-  // this->root_path = ROOT_PATH;
-}
+#include <math.h>
+fsController::fsController() = default;
 
 bool fsController::init_superblock() {
   this->fs.superblock.s_inode_num = INODE_NUM;
@@ -94,10 +91,10 @@ bool fsController::formatfs() {
 
 
   // create root dir
-  if (!create_RootDir) {
-    perror("[err] create root dir failed.");
-    return false;
-  }
+//  if (!create_RootDir) {
+//    perror("[err] create root dir failed.");
+//    return false;
+//  }
 
   //cur.i_ino = i
 
@@ -176,7 +173,7 @@ bool fsController::ReadFileToBuf(const iNode &cur, int start, int len, char *buf
       *dst = cur.i_addr[startBlock];
     else if (startBlock <= (int) (INODE_DIRECT_MAX + INODE_INDIR1_SIZE)) {
       char buf1[BLOCK_SIZE];
-      if (!_vhd_.read_vhd(buf1, cur.i_addr[INODE_INDIR1_MAX]), BLOCK_SIZE)
+      if (!_vhd_.read_vhd(buf1, cur.i_addr[INODE_INDIR1_MAX]))
         return false;
       char *src = buf1 + (startBlock - INODE_DIRECT_CNT) * sizeof(int);
       memcpy(dst, src, sizeof(int));

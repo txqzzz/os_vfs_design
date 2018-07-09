@@ -68,7 +68,7 @@ using namespace std;
 /* ROOT PATH */
 #define ROOT_PATH "~/dev/"
 /* iNode */
-#define  ROOTDIRiNODE 1
+#define ROOTDIRiNODE 1
 #define DIRFLAG 1<<7
 #define OWNER_RFLAG 1<<6
 #define OWNER_WFLAG 1<<5
@@ -78,7 +78,8 @@ using namespace std;
 #define PUBLIC_XFLAG 1<<1
 /* DENTRY */
 #define DOT "."
-#define  DOTDOT ".."
+#define DOTDOT ".."
+#define FILENAME_MAX_LEN 128
 /* USER */
 #define MAX_USER_NUMBER 8
 #define ROOT_UID 1

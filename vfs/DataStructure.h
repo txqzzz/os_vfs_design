@@ -77,7 +77,7 @@ struct iNode {
 //dentry_obj: filename/i_ino/`
 //            file_obj: dir_entry/file_mode/this.filename/this.ino
 struct Dentry {
-    char name[];
+    char name[FILENAME_MAX_LEN];
     int i_ino;
 };
 
