@@ -7,6 +7,8 @@
 
 
 class dentryController {
+public:
+    dentryController();
 
 };
 

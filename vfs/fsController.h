@@ -6,6 +6,7 @@
 #define VFS_FSCONTROLLER_H
 
 #include "DataStructure.h"
+#include "vhdController.h"
 
 class fsController {
 public:
@@ -18,19 +19,26 @@ public:
     bool init_iNode_free_list();
 
     bool init_user_info();
-
     bool init_dentry_info();
+    bool init_i_bitmap();
+    bool init_superblock();
+    bool writeSbIntoVHD();
+    int get_next_i_free_list_index();
+    bool is_get_fs(fileSystem _fs);
 
-    int get_next_free_list_index() {
-        return next_free_list_index;
-    }
+    fileSystem get_fs();
+
 
 private:
     fileSystem fs;
+    iSb isb;
+    dSb dsb;
+    sB superblock;
     int user_num;
     int cur_dir_inode;
-    int next_free_list_index;
+    int next_i_free_list_index;
     string root_path;
+    string welcomeMsg;
 };
 
 #endif //VFS_FSCONTROLLER_H

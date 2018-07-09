@@ -20,6 +20,7 @@ public:
 
     int find_iNode_by_uid(int id);
 
+    int  alloc_iNode(fsController &fsc);
 private:
     iNode inode;
 };

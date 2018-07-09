@@ -12,7 +12,8 @@ int allocate_free_block();
 void lg_table_into_sb();
 
 int allocate_free_block() {
-    if (fileSystem.)
+    //if (fileSystem.)
+    return 0;
 }
 
 

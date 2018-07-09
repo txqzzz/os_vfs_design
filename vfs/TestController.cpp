@@ -54,7 +54,7 @@ bool TestController::testvhdController(vhdController &_vhd_) {
         return false;
     }
 }
-/*
+
 bool TestController::testuserController(userController &_user_) {
     user my_user;
     user my_user2;
@@ -77,14 +77,16 @@ bool TestController::testuserController(userController &_user_) {
     _user_.addUser(my_user);
     _user_.showUser();
     _user_.UserloginIN();
-}*/
-/*int  TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
+    return true;
+}
+
+int  TestController::testiNodeController(iNodeController &_iNode_, fsController _fs_) {
     iNode myiNode,myiNode2;
     vhdController _vhd_;
     myiNode.i_ino = 1;
     myiNode.i_uid = 0;
     myiNode.i_gid = 1;
-    myiNode.i_addr[1, 2, 3];
+    //myiNode.i_addr[1, 2, 3];
     myiNode.i_block = 1;
     myiNode.i_bytes = 234;
     myiNode.i_mode = 1;
@@ -105,4 +107,4 @@ bool TestController::testuserController(userController &_user_) {
     delete[] rdbuf;
     cout<<"return"<<endl;
     return 0;
-}*/
+}
