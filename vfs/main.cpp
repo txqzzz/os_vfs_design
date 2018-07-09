@@ -6,6 +6,7 @@
 #include "DataStructure.h"
 #include "Params.h"
 #include "dataBController.h"
+#include "fsController.h"
 
 using namespace std;
 
@@ -36,7 +37,7 @@ int main() {
     //_fs_.init_iNode_free_list();
     if (TestController::testvhdController(_vhd_))
         cout << "[ok] vhdController Test Checked." << endl;
-    if (TestController::testdataController(_dataB));
+    if (TestController::testdataController(_dataB))
         cout<<"[ok] dataController test checked"<<endl;
     //if (TestController::testuserController(_user_))
     //   cout << "[ok] userController Test Checked." << endl;

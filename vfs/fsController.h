@@ -20,6 +20,7 @@ public:
 
     //bool init_iNode_free_list();
 
+
     bool init_user_info();
 
     bool init_dentry_info();
