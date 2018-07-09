@@ -11,19 +11,15 @@
 
 class iNodeController {
 public:
-    bool write_iNode(iNode i_inode, fsController &fs_Controller);
-
+    bool write_iNode(iNode i_inode);
     bool del_iNode(iNode i_Node);
-
     //bool modify_iNode();
     bool read_iNode(int id, iNode &i_Node);
-
     int find_iNode_by_uid(int id);
-
-
-    int  alloc_iNode(fsController &fsc);
+    int alloc_iNode();
 private:
     iNode inode;
+    int next_i_free_list_index;
 };
 //    int i_ino;
 //    vector i_hash;

@@ -3,13 +3,13 @@
 //
 #include "iNodeController.h"
 
-bool iNodeController::write_iNode(iNode i_inode, fsController &fs_Controller) {
+bool iNodeController::write_iNode(iNode i_inode) {
     this->inode = i_inode;
     char buf[BLOCK_SIZE];
     memcpy(buf, (char *) &i_inode, BLOCK_SIZE);
     vhdController vhd_Controller;
     vhd_Controller.load_vhd();
-    vhd_Controller.write_vhd(buf, fs_Controller.get_next_i_free_list_index());
+    vhd_Controller.write_vhd(buf, this->next_i_free_list_index);
     return true;
 }
 
@@ -44,8 +44,9 @@ int iNodeController::find_iNode_by_uid(int uid) {
     return -1;
 }
 
-int iNodeController::alloc_iNode(fsController &fsc) {
+int iNodeController::alloc_iNode() {
 /* find free iNode i_ino in i_bitmap, return i_ino */
+    fsController fsc;
     vhdController _vhdc;
     _vhdc.load_vhd();
     if (_vhdc.load_vhd()) {

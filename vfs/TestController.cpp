@@ -93,7 +93,7 @@ int TestController::testiNodeController(iNodeController &_iNode_, fsController _
     myiNode.i_sb = 1;
     myiNode.i_nlink = 2;
     //cout << myiNode.i_mode << endl;
-    _iNode_.write_iNode(myiNode, _fs_);
+    _iNode_.write_iNode(myiNode);
     char *rdbuf = new char[BLOCK_SIZE];
     //cout << _fs_.get_next_free_list_index()<<endl;
     _vhd_.load_vhd();

@@ -59,11 +59,14 @@ struct iNode {
     vector<int> i_hash;
     list<int> i_sb_list;
     int i_mode;
+    int i_parent;
+    char i_name[15];
     int i_uid;
-    int i_nlink;
+    int i_nlink; //hard link num;
     int i_gid;
     int i_size;
-    char i_atime[15];
+    time_t atime;
+    time_t mtime;
     char i_mtime[15];
     int i_block;
     int i_bytes;
@@ -74,7 +77,7 @@ struct iNode {
 //dentry_obj: filename/i_ino/`
 //            file_obj: dir_entry/file_mode/this.filename/this.ino
 struct Dentry {
-    string fliename;
+    char name[];
     int i_ino;
 };
 

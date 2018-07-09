@@ -33,7 +33,7 @@ int main() {
     iNodeController my_iNode;
     dataBController _dataB;
     userController _user_;
-    _fs_.init_iNode_free_list();
+    //_fs_.init_iNode_free_list();
     if (TestController::testvhdController(_vhd_))
         cout << "[ok] vhdController Test Checked." << endl;
     if (TestController::testdataController(_dataB));
