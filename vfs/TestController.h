@@ -8,6 +8,7 @@
 #include"vhdController.h"
 #include"iNodeController.h"
 #include "userController.h"
+#include "dataBController.h"
 
 class TestController {
 public:
@@ -20,6 +21,8 @@ public:
     static int testiNodeController(iNodeController &_iNode_, fsController _fs_);
 
     static bool testuserController(userController &_user_);
+
+    static bool testdataController(dataBController &_dataB_);
 };
 
 #endif //VFS_TEST_H

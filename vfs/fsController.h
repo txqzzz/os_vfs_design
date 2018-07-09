@@ -19,7 +19,9 @@ public:
     bool init_iNode_free_list();
 
     bool init_user_info();
+
     bool init_dentry_info();
+
     bool init_i_bitmap();
     bool init_superblock();
     bool writeSbIntoVHD();
@@ -32,7 +34,6 @@ public:
 private:
     fileSystem fs;
     iSb isb;
-    dSb dsb;
     sB superblock;
     int user_num;
     int cur_dir_inode;
