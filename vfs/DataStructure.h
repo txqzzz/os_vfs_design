@@ -39,7 +39,8 @@ struct sB {
     int s_InodeBitmap_StartAddr;
     int s_Block_StartAddr;
     int s_Inode_StartAddr;
-
+    int DstackDepth;
+    stack<int> dSbStack;
     bool i_bitmap[512]; //inode_num = inode_end - inode_beg + 1
     bool d_bitmap[15869];
 };
@@ -48,11 +49,10 @@ struct iSb {
     int stackDepth;
     stack<int> iSbStack;
 };
-
-struct dSb {
+/*struct dSb {
     int stackDepth;
     stack<int> dSbStack;
-};
+};*/
 
 struct iNode {
     int i_ino;
@@ -95,7 +95,6 @@ struct user {
 struct fileSystem {
     bootstrapBlock bB;
     iSb iNodeSb;
-    dSb dataSb;
     sB superblock;
     Dentry dentry;
     user user_info[MAX_USER_NUMBER];

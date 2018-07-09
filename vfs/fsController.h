@@ -34,7 +34,6 @@ public:
 private:
     fileSystem fs;
     iSb isb;
-    dSb dsb;
     sB superblock;
     int user_num;
     int cur_dir_inode;

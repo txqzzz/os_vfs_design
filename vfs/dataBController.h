@@ -7,17 +7,27 @@
 
 
 #include "fsController.h"
-
+#include "vhdController.h"
 class dataBController {
 public:
     dataBController();
-    int  alloc_datab(fsController &_fs);
-    bool init_datab_free_list(fsController &_fs);
-    bool d_free_listintoDsbStack(fsController &_fs);
-    bool release_datab(fsController &_fs);
+    ~dataBController();
+    int  alloc_datab();
+    bool init_datab();
+    bool load_Sb();
+    bool load_Sb(int id);
+    bool save_Sb();
+    bool save_Sb(int id);
+    bool release_datab(int id);
+    bool  setfullflag();
+    sB get_sB();
 private:
+    sB superblock;
+    //vhdController _vhd_;
+    int superblockid;
     unsigned int datab_free_num;
     unsigned int next_d_free_list_index;
+
 };
 
 

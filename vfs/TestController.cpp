@@ -55,7 +55,6 @@ bool TestController::testvhdController(vhdController &_vhd_) {
     }
 }
 
-
 bool TestController::testuserController(userController &_user_) {
     user my_user;
     user my_user2;
@@ -108,4 +107,15 @@ int  TestController::testiNodeController(iNodeController &_iNode_, fsController 
     delete[] rdbuf;
     cout<<"return"<<endl;
     return 0;
+}
+
+bool TestController::testdataController(dataBController &_dataB_) {
+    _dataB_.init_datab();
+    //sB superBlock_;
+    //superBlock_=_dataB_.get_sB();
+    cout<<_dataB_.get_sB().DstackDepth<<endl;
+    //int temp,temp2;
+    //temp=_dataB_.alloc_datab();
+    //temp=_dataB_.alloc_datab();
+    //cout<<temp<<temp2<<endl;
 }
