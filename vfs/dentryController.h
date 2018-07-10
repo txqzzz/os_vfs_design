@@ -14,7 +14,7 @@
 class dentryController {
 public:
     dentryController();
-<<<<<<< HEAD
+
     //dir ops
     bool init_DirSFDList(iNode& cur,int parent_ino);
     bool create_RootDir();
@@ -24,7 +24,7 @@ public:
     // SFD operation
     bool delete_SFDEntry(const iNode& cur);
     bool AppendSFDEntry(iNode& parent, const Dentry& newSFD);
-=======
+
     bool GetContentInDir(const iNode& curDir, Dentry* rst);
     bool FindContentInDir(const Dentry* DirSet, const int len, const char* name, int* rst);
     bool InitDirSFDList(iNode& cur,int parent_ino);
@@ -32,7 +32,6 @@ public:
     bool CreateSubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst);
     bool DeleteDir(const iNode& cur);
     bool WriteFlieFromBuf(iNode &cur,int start,int len , char *buf);
->>>>>>> parent of 7736a5a... 规范化了一些函数
 };
 
 

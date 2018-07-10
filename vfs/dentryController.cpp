@@ -3,16 +3,12 @@
 //
 #include "dentryController.h"
 
-<<<<<<< HEAD
 bool dentryController::dentryController() {
     return;
 }
 
 bool dentryController::init_DirSFDList(iNode &cur, int parent_ino) {
 
-=======
-bool dentryController::InitDirSFDList(iNode &cur, int parent_ino) {
->>>>>>> parent of 7736a5a... 规范化了一些函数
     Dentry sfdList[2];
     // Dot denode itself
     strcpy(sfdList[0].name, DOT);
@@ -22,7 +18,8 @@ bool dentryController::InitDirSFDList(iNode &cur, int parent_ino) {
     sfdList[1].i_ino = parent_ino;
     return true;
 }
-bool dentryController::CreateRootDir()
+
+bool dentryController::create_RootDir()
 {
     // Create RootDir iNode
     iNode rootiNode;
@@ -45,13 +42,8 @@ bool dentryController::CreateRootDir()
         return false;
     return true;
 }
-<<<<<<< HEAD
 
 bool dentryController::create_SubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst) {
-=======
-bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst)
-{
->>>>>>> parent of 7736a5a... 规范化了一些函数
     fsController fsC;
     iNodeController iNC;
     fsC.create_empty_Flie(curDir, name, mode | DIRFLAG, ownerUid, rst);
@@ -59,8 +51,6 @@ bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ow
     iNC.write_iNode(curDir);
     return true;
 }
-<<<<<<< HEAD
-
 
 bool dentryController::delete_SFDEntry(const iNode& cur) {
     fsController fsc;
@@ -72,16 +62,6 @@ bool dentryController::delete_SFDEntry(const iNode& cur) {
     // Get SFD List
     Dentry* SFDList = new Dentry[piNode.i_size / sizeof(Dentry)];
     if (!fsc.ReadFileToBuf(piNode, 0, piNode.i_size, (char*)SFDList))
-=======
-/*bool dentryController::DeleteDir(const iNode& cur)
-{
-    // Only for dir
-    if (!(cur.i_mode & DIRFLAG)) return false;
-    // Readin SFD List
-    iNode nowiNode;
-    Dentry* SFDList = new Dentry[cur.i_size / sizeof(Dentry)];
-    if (!GetContentInDir(cur, SFDList))
->>>>>>> parent of 7736a5a... 规范化了一些函数
     {
         delete[] SFDList;
         return false;
@@ -133,4 +113,3 @@ bool dentryController::delete_SFDEntry(const iNode& cur) {
     delete[] SFDList;
     return true;
 }
- */

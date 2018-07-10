@@ -784,5 +784,3 @@ bool fsController::DeleteIndir2Blocks(const iNode &cur) {
     // Recycle indir2 block
     return dbc.release_datab(cur.i_addr[INODE_INDIR2_MAX]);
 }
-
-
