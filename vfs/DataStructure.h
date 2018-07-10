@@ -58,7 +58,7 @@ struct iNode {
     int i_ino;
     vector<int> i_hash;
     list<int> i_sb_list;
-    int i_mode;
+    char i_mode;
     int i_parent;
     char i_name[15];
     int i_uid;
