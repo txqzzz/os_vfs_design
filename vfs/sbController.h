@@ -4,30 +4,24 @@
 
 #ifndef VFS_SBCONTROLLER_H
 #define VFS_SBCONTROLLER_H
-#include "vhdController.h"
-#include "DataStructure.h"
+
 
 class sbController {
 public:
-public:
-    sbController(vhdController& _vhdc, int _sbID, int _minbID, int _maxbID);
-    ~sbController();
-    bool LoadSuperBLock();
-    bool LoadSuperBLock(int blockID);
-    bool SaveSuperBlock();
-    bool SaveSuperBlock(int blockID);
-    bool Recycle(const iNode &blockID);
-    bool Distribute(int* blockID);
-    void SetFullFlag();
+    sbController();
 
-protected:
+    ~sbController();
+
+    bool alloc_sb();
+
+    bool free_sb();
+
+    bool load_sb();
+
+    bool read_sb();
 
 private:
-    vhdController& vhdc;
-    int superblockID;
-    int minblockID;
-    int maxblockID;
-    sB superblock;
+    //
 };
 
 

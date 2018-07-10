@@ -13,12 +13,10 @@ class iNodeController {
 public:
     bool write_iNode(iNode i_inode);
     bool del_iNode(iNode i_Node);
+    //bool modify_iNode();
     bool read_iNode(int id, iNode &i_Node);
     int find_iNode_by_uid(int id);
     int alloc_iNode();
-    int release_iNode();
-    iNode get_iNode_by_ino(int id);
-    iNode get_iNode_by_id(int id);
 private:
     iNode inode;
     int next_i_free_list_index;
