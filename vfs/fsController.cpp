@@ -72,12 +72,12 @@ bool fsController::copy(const iNode& src, iNode& des, char* name, int uid) {
 bool fsController::move(iNode& src, iNode& des, char* name) {
     // Delete SFD entry from old parent dir
     dentryController DC;
-    delete_SFDEntry(src);
+    DC.delete_SFDEntry(src);
     // Append new SFD entry
     Dentry newSFD;
     strcpy(newSFD.name, name);
     newSFD.i_ino = src.i_ino;
-    if (!this->AppendSFDEntry(des, newSFD)) return false;
+    DC.AppendSFDEntry(des, newSFD);
     // Update src iNode
     strcpy(src.i_name, name);
     src.i_parent = des.i_ino;
@@ -147,7 +147,7 @@ bool fsController::create_empty_Flie(iNode &curDir, char *name, char mode, int o
 /*utils*/
 void fsController::get_AbspluteDir(const iNode& cur, char* dir) {
     char rootName[] = "/";
-    if (strcmp(cur.name, rootName) == 0)
+    if (strcmp(cur.i_name, rootName) == 0)
     {
         strcpy(dir, rootName);
         return;
@@ -155,17 +155,18 @@ void fsController::get_AbspluteDir(const iNode& cur, char* dir) {
     string ts;
     iNode now;
     memcpy((char*)&now, (char*)&cur, sizeof(iNode));
-    while (strcmp(now.name, "/") != 0)
+    while (strcmp(now.i_name, "/") != 0)
     {
-        string tt(now.name);
+        string tt(now.i_name);
         ts = "/" + tt + ts;
-        this->GetiNodeByID(now.parent, &now);
+        this->GetiNodeByID(now.i_parent, &now);
     }
     strcpy(dir, ts.c_str());
     return;
 }
 bool fsController::parsePath(const iNode& curDir, char* path, bool last, iNode* rst) {
     iNode nowiNode, tmpiNode;
+    vhdController vhdc;
     int pp = 0, totLinkCnt = 0;
     if(path[0] == '/')
     {
@@ -175,7 +176,7 @@ bool fsController::parsePath(const iNode& curDir, char* path, bool last, iNode* 
     }
     else memcpy((char*)&nowiNode, (char*)&curDir, sizeof(iNode));
 
-    char buf[FILENAME_MAXLEN + 10];
+    char buf[128 + 10];
     int bufp, target;
     while(true)
     {
@@ -195,8 +196,8 @@ bool fsController::parsePath(const iNode& curDir, char* path, bool last, iNode* 
         buf[bufp] = '\0';
         if(bufp == 0) break;
 
-        int subDirnum = nowiNode.size / sizeof(SFD);
-        SFD* DirSet = new SFD[subDirnum];
+        int subDirnum = nowiNode.i_size / sizeof(Dentry);
+        Dentry* DirSet = new Dentry[subDirnum];
         if(!GetContentInDir(nowiNode, DirSet))
         {
             delete[] DirSet;
@@ -204,17 +205,13 @@ bool fsController::parsePath(const iNode& curDir, char* path, bool last, iNode* 
         }
         if(FindContentInDir(DirSet, subDirnum, buf, &target))
         {
-            if(!vhdc.ReadBlock(DirSet[target].inode, (char*)&tmpiNode, sizeof(iNode)))
-            {
-                delete[] DirSet;
-                return false;
-            }
+            vhdc.read_vhd((char*)&tmpiNode,DirSet[target].i_ino,  sizeof(iNode));
             // If the last level of the path is a file -> true
             // else -> false
-            if(!(tmpiNode.mode & DIRFLAG) && (path[pp] != '\0'))
+            if(!(tmpiNode.i_mode & DIRFLAG) && (path[pp] != '\0'))
                 return false;
             // Follow symbolic link
-            if(tmpiNode.mode & SYNLINKFLAG)
+            if(tmpiNode.i_mode & SYNLINKFLAG)
             {
                 totLinkCnt++;
                 if(totLinkCnt > MAXFOLLOWLINK) return false;
