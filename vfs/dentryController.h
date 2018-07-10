@@ -7,11 +7,24 @@
 
 #include "DataStructure.h"
 #include "vhdController.h"
+#include "fsController.h"
 #include "iNodeController.h"
+
 
 class dentryController {
 public:
     dentryController();
+
+    //dir ops
+    bool init_DirSFDList(iNode& cur,int parent_ino);
+    bool create_RootDir();
+    bool create_SubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst);
+
+
+    // SFD operation
+    bool delete_SFDEntry(const iNode& cur);
+    bool AppendSFDEntry(iNode& parent, const Dentry& newSFD);
+
     bool GetContentInDir(const iNode& curDir, Dentry* rst);
     bool FindContentInDir(const Dentry* DirSet, const int len, const char* name, int* rst);
     bool InitDirSFDList(iNode& cur,int parent_ino);

@@ -68,7 +68,7 @@ using namespace std;
 /* ROOT PATH */
 #define ROOT_PATH "~/dev/"
 /* iNode */
-#define ROOTDIRiNODE 1
+#define ROOTDIRiNODE 2
 #define DIRFLAG 1<<7
 #define OWNER_RFLAG 1<<6
 #define OWNER_WFLAG 1<<5
@@ -76,6 +76,8 @@ using namespace std;
 #define PUBLIC_RFLAG 1<<3
 #define PUBLIC_WFLAG 1<<2
 #define PUBLIC_XFLAG 1<<1
+#define OWNER_ALLFLAG (OWNER_RFLAG | OWNER_WFLAG| OWNER_XFLAG)
+#define GROUP_ALLFLAG (GROUP_RFLAG | GROUP_WFLAG| GROUP_XFLAG)
 /* DENTRY */
 #define DOT "."
 #define DOTDOT ".."

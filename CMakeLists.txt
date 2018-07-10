@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.10)
 project(os_vfs_design)
 
 set(CMAKE_CXX_STANDARD 11)
-
+set(CMAKE_C_COMPILE clang)
 include_directories(vfs)
 
 add_executable(os_vfs_design
@@ -25,5 +25,5 @@ add_executable(os_vfs_design
         vfs/vhdController.h
         vfs/userController.cpp
         vfs/userController.h
-        vfs/LGM.cpp vfs/dataBController.cpp vfs/dataBController.h)
+        vfs/LGM.cpp vfs/dataBController.cpp vfs/dataBController.h vfs/cmdController.cpp vfs/cmdController.h)
 

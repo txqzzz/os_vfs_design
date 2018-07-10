@@ -3,7 +3,12 @@
 //
 #include "dentryController.h"
 
-bool dentryController::InitDirSFDList(iNode &cur, int parent_ino) {
+bool dentryController::dentryController() {
+    return;
+}
+
+bool dentryController::init_DirSFDList(iNode &cur, int parent_ino) {
+
     Dentry sfdList[2];
     // Dot denode itself
     strcpy(sfdList[0].name, DOT);
@@ -13,7 +18,8 @@ bool dentryController::InitDirSFDList(iNode &cur, int parent_ino) {
     sfdList[1].i_ino = parent_ino;
     return true;
 }
-bool dentryController::CreateRootDir()
+
+bool dentryController::create_RootDir()
 {
     // Create RootDir iNode
     iNode rootiNode;
@@ -36,8 +42,8 @@ bool dentryController::CreateRootDir()
         return false;
     return true;
 }
-bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst)
-{
+
+bool dentryController::create_SubDir(iNode& curDir, char* name, char mode, int ownerUid, iNode* rst) {
     fsController fsC;
     iNodeController iNC;
     fsC.create_empty_Flie(curDir, name, mode | DIRFLAG, ownerUid, rst);
@@ -45,14 +51,17 @@ bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ow
     iNC.write_iNode(curDir);
     return true;
 }
-/*bool dentryController::DeleteDir(const iNode& cur)
-{
-    // Only for dir
-    if (!(cur.i_mode & DIRFLAG)) return false;
-    // Readin SFD List
-    iNode nowiNode;
-    Dentry* SFDList = new Dentry[cur.i_size / sizeof(Dentry)];
-    if (!GetContentInDir(cur, SFDList))
+
+bool dentryController::delete_SFDEntry(const iNode& cur) {
+    fsController fsc;
+    // Get parent iNode
+    fsController fsc;
+    iNode piNode;
+    if (!fsc.GetiNodeByID(cur.i_parent, &piNode)) return false;
+    if (!(piNode.i_mode & DIRFLAG)) return false;
+    // Get SFD List
+    Dentry* SFDList = new Dentry[piNode.i_size / sizeof(Dentry)];
+    if (!fsc.ReadFileToBuf(piNode, 0, piNode.i_size, (char*)SFDList))
     {
         delete[] SFDList;
         return false;
@@ -104,4 +113,3 @@ bool dentryController::CreateSubDir(iNode& curDir, char* name, char mode, int ow
     delete[] SFDList;
     return true;
 }
- */
